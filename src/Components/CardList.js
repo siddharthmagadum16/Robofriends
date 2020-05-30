@@ -2,6 +2,9 @@ import React, {Fragment} from 'react';
 import Card from  './Card';
 
 const CardList = ({ Robots })=> {
+  if (1){
+    throw new Error("Nope!!!!!!!!!!");
+  }
   return (
     <Fragment>
     {

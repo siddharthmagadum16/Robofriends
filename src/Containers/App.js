@@ -4,6 +4,7 @@ import CardList from '../Components/CardList';
 import SearchBox from '../Components/SearchBox';
 import Scroll from '../Components/Scroll';
 import './App.css';
+import ErrorBoundary from '../Components/ErrorBoundary';
 class App extends React.Component  {
     constructor(){
         super()
@@ -45,7 +46,9 @@ class App extends React.Component  {
                 </div>
             
                 <Scroll>
-                    <CardList Robots={ Robotfriend }/>
+                    <ErrorBoundary>
+                        <CardList Robots={ Robotfriend }/>
+                    </ErrorBoundary>
                 </Scroll>
             </div>
         )
